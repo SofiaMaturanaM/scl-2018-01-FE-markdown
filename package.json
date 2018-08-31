@@ -1,0 +1,26 @@
+{
+  "name": "scl-2018-01-fe-markdown",
+  "version": "0.0.1",
+  "description": "Librería que identifica y valida links dentro de un archivo de marcado",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofiaMaturanaM/scl-2018-01-FE-markdown.git"
+  },
+  "author": "Sofía Maturana Matsuda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofiaMaturanaM/scl-2018-01-FE-markdown/issues"
+  },
+  "homepage": "https://github.com/SofiaMaturanaM/scl-2018-01-FE-markdown#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "jest": "^23.5.0"
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^21.22.0"
+  }
+}

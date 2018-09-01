@@ -36,6 +36,10 @@ module.exports = {
 
         "no-useless-escape":[
             "off"
+        ],
+
+        "no-unused-vars":[
+            "off"
         ]
 
     }

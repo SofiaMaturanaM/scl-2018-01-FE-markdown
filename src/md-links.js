@@ -65,12 +65,12 @@ function markdownLinkExtractor(markdown) {
 	return validateLinks(links);
 	
 }
-
+//validar links
 function validateLinks(links) {  
 	links.forEach(element => {
 		let url = element.href;
 		let texto = element.text;
-		let textFile = texto.toString(texto).substring(0,50);
+		let textFile = texto.toString(texto).substring(0,50);//No funciona, iterar
 		fetch(url).then(response => response
 		).then(data => {
 			console.log( data.url + ' ' + data.status + ' ' + data.statusText + ' ' + data.textFile);

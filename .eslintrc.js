@@ -28,7 +28,11 @@ module.exports = {
 
         "no-console":[
             "off"
-        ] 
+        ],
+
+        "no-control-regex":[
+            "off"
+        ]
 
     }
 };

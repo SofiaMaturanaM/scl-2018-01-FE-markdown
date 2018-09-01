@@ -1,5 +1,5 @@
 {
-  "name": "scl-2018-01-fe-markdown",
+  "name": "markdown-links-extractor",
   "version": "0.0.1",
   "description": "Librería que identifica y valida links dentro de un archivo de marcado",
   "main": "index.js",

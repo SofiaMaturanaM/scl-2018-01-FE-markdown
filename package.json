@@ -21,6 +21,7 @@
     "jest": "^23.5.0"
   },
   "dependencies": {
-    "eslint-plugin-jest": "^21.22.0"
+    "eslint-plugin-jest": "^21.22.0",
+    "node-fetch": "^2.2.0"
   }
 }

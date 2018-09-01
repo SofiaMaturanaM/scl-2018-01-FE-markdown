@@ -32,6 +32,10 @@ module.exports = {
 
         "no-control-regex":[
             "off"
+        ],
+
+        "no-useless-escape":[
+            "off"
         ]
 
     }

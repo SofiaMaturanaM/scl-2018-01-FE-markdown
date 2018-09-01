@@ -1,7 +1,8 @@
 #!/usr/bin/env node 
 
-const mdLinks = require('./src/md-links').mdLinks;
+let mdLinks = {}; 
 const path = require('path');
+const fs = require('fs'); 
 const [, , ...args] = process.argv.slice(2);
 let options = {};
 if (args.includes('--validate')) options.validate = true;
@@ -26,5 +27,12 @@ mdLinks(path, { validate: true })
 		console.log(result);
 	})
 		.catch(console.error));
+        
+//Lee un archivo y lo retorna como una promesa.
+mdLinks.leerArchivo  = (file) => {
+	return new Promise(function (resolve, reject) {
+		resolve(fs.readFileSync(file, 'utf8'));
+	});	
+};
 
 module.exports = mdLinks;

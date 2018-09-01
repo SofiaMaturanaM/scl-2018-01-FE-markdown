@@ -18,7 +18,7 @@ mdLinks.convertToAbsolutePath = (ruta) => {
 	return path.resolve(ruta); 
 };
 
-const ruta= path.resolve();
+const ruta= path.resolve('./README.md');
 
 //Leer el archivo 
 fs.readFile(ruta, 'utf-8', function (err,data){
@@ -26,6 +26,7 @@ fs.readFile(ruta, 'utf-8', function (err,data){
 	{
 		console.log(err);
 	}
+    
 	console.log(ruta);
 	return markdownLinkExtractor(data);
 });
@@ -60,8 +61,28 @@ function markdownLinkExtractor(markdown) {
 		});
 	};
 	Marked(markdown, {renderer: renderer});
-
-	return links;
+	console.log(links);
+	return validateLinks(links);
+	
 }
 
-
+function validateLinks(links) {  
+	links.forEach(element => {
+		let url = element.href;
+		let texto = element.text;
+		let textFile = texto.toString(texto).substring(0,50);
+		fetch(url).then(response => response
+		).then(data => {
+			console.log( data.url + ' ' + data.status + ' ' + data.statusText + ' ' + data.textFile);
+  
+			if (data.status=='404'){
+				(console.log('No encontrado')); 
+       
+			}
+		}).catch(error => {
+			console.error('ERROR > ' + error.status);
+		});
+	});
+}
+  
+module.exports = mdLinks;

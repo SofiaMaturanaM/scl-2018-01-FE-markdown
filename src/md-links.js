@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 const path = require('path');
 let mdLinks = {};
 
+
 //Verificar la ruta
 mdLinks.verifyPath = (path) => {
 	if(path !== ''){

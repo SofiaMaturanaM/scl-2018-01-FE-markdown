@@ -13,7 +13,7 @@ mdLinks(path)
 		if (links.length === 0) console.error('No se encontraron enlaces');
 		links.forEach(element => {
 			let result = '';
-			result = element.path + ' : ' + element.line + ' : ' + element.href + ' : ' + element.text;
+			result = `${element.path} : ${element.line} : ${element.href} : ${element.text}`;
 			console.log(result);
 		});
 	}).catch((error) => {
@@ -23,7 +23,7 @@ mdLinks(path)
 mdLinks(path, { validate: true })
 	.then(links => links.forEach(element => {
 		let result = '';
-		if (options.validate) result = element.path + ' : ' + element.line + ' : ' + element.href + ' : ' + element.text + ' : ' + element.ok + ' : ' + element.status;
+		if (options.validate) result = `${element.path} : ${element.line} : ${element.href} : ${element.text} : ${element.ok} : ${element.status}`;
 		console.log(result);
 	})
 		.catch(console.error));
